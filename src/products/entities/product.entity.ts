@@ -23,6 +23,10 @@ export class Product {
   @Column({ type: 'int' })
   inventory: number;
 
-  @ManyToOne(() => Category)
+  // eager brings data related to the category
+  @ManyToOne(() => Category /* , { eager: true } */)
   category: Category;
+
+  @Column({ type: 'int' })
+  categoryId: number;
 }
