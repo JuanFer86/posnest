@@ -23,10 +23,6 @@ export class SeederService {
   }
 
   async seed() {
-    console.log(
-      'y yo estoy aquiiii',
-      this.categoryRepository.manager.connection.isInitialized,
-    );
     await this.categoryRepository.save(categories);
 
     for await (const seedProduct of products) {
