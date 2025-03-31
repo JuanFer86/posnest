@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { v2 as cloudinary } from 'cloudinary';
-import { CloudinaryResponse } from '../../dist/upload-image/uplpoad-image.response';
+import { CloudinaryResponse } from './upload-image.response';
 
 const streamifier = require('streamifier');
 

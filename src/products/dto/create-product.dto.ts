@@ -9,6 +9,9 @@ export class CreateProductDto {
   @IsNumber({ maxDecimalPlaces: 2 }, { message: 'Price invalid' })
   price: number;
 
+  @IsNotEmpty({ message: 'The image name is required' })
+  image: string;
+
   @IsNotEmpty({ message: 'The product inventory is required' })
   @IsNumber({ maxDecimalPlaces: 0 }, { message: 'Inventory invalid' })
   inventory: number;
